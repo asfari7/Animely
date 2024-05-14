@@ -3,6 +3,7 @@ import CardTopAnime from "../components/CardTopAnime";
 import BannerTopSeries from "../components/BannerTopSeries";
 import axios from "axios";
 import SkeletonTopAnimeCard from "../components/SkeletonTopAnimeCard";
+import { Link } from "react-router-dom";
 
 function TopAnimePage() {
   const [data, setData] = useState([]);
@@ -37,6 +38,7 @@ function TopAnimePage() {
           : data.map((data) => (
               <CardTopAnime
                 key={data.mal_id}
+                mal_id={data.mal_id}
                 rank={data.rank}
                 image={data.images.jpg.image_url}
                 title={data.title}
