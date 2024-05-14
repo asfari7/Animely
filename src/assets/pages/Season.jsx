@@ -36,6 +36,7 @@ function Season() {
           : data.map((data) => (
               <CardSeason
                 key={data.mal_id}
+                mal_id={data.mal_id}
                 score={data.score}
                 image={data.images.jpg.image_url}
                 title={data.title}

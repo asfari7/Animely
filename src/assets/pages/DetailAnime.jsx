@@ -29,8 +29,8 @@ function DetailAnime(props) {
   }
 
   return (
-    <section>
-      <div className="flex sm:flex-row flex-col gap-4">
+    <section className="my-10">
+      <div className="flex sm:flex-row flex-col gap-10">
         <img
           className="bg-slate-300 w-44 self-center aspect-3/4 basis-1/4 rounded-lg"
           src={data.images.jpg.image_url}

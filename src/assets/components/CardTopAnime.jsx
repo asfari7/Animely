@@ -1,10 +1,11 @@
 import React from "react";
 import img_star from "@img/img_star.png";
 import GenreTag from "@components/GenreTag";
+import { Link } from "react-router-dom";
 
 function CardTopAnime(props) {
   return (
-    <div className="flex flex-row gap-6 rounded-xl my-6">
+    <div className="flex flex-row gap-6 rounded-xl my-6 relative">
       <h2 className="my-2 w-9 text-2xl md:text-6xl font-semibold">
         {props.rank}
       </h2>
@@ -28,6 +29,10 @@ function CardTopAnime(props) {
           <p>{props.score}</p>
         </span>
       </div>
+      <Link
+        to="/detail-anime"
+        state={{ mal_id: props.mal_id }}
+        className="after:absolute after:inset-0"></Link>
     </div>
   );
 }

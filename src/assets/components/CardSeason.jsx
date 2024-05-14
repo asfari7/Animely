@@ -1,10 +1,11 @@
 import React from "react";
 import GenreTag from "@components/GenreTag";
 import img_star from "@img/img_star.png";
+import { Link } from "react-router-dom";
 
 function CardSeason(props) {
   return (
-    <div className="border px-4 rounded-xl ">
+    <div className="border px-4 rounded-xl relative">
       <div className="text-center">
         <h1 className="my-2 text-sm md:text-xl font-semibold text-center">
           {props.title}
@@ -27,6 +28,10 @@ function CardSeason(props) {
         />
         <p className="overflow-auto text-sm md:text-base ">{props.sysnopsis}</p>
       </div>
+      <Link
+        to="/detail-anime"
+        state={{ mal_id: props.mal_id }}
+        className="after:absolute after:inset-0"></Link>
     </div>
   );
 }
