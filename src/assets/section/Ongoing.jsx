@@ -26,6 +26,7 @@ function Ongoing(props) {
           : data.map((data) => (
               <Card
                 key={data.mal_id}
+                mal_id={data.mal_id}
                 image={data.images.jpg.image_url}
                 title={data.title}
                 score={data.score}
