@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 function CardTopAnime(props) {
   return (
     <div className="flex flex-row gap-6 rounded-xl my-6 relative">
-      <h2 className="my-2 w-9 text-2xl md:text-6xl font-semibold">
+      <h2 className="md:w-10 text-2xl md:text-6xl font-semibold">
         {props.rank}
       </h2>
       <img
         src={props.image}
         alt="Top Anime"
-        className="rounded-lg w-28 md:w-36"
+        className="rounded-lg w-28 aspect-4/3 self-start"
       />
       <div className="flex flex-col gap-2">
         <h2 className="my-2 text-sm md:text-xl font-semibold line-clamp-2">
